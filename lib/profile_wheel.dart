@@ -37,7 +37,8 @@ class ProfileWheelState extends State<ProfileWheel> {
     super.initState();
 
     edgeInsets = [
-      EdgeInsets.only(right: widget.dividerWeight, bottom: widget.dividerWeight),
+      EdgeInsets.only(
+          right: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(right: widget.dividerWeight, top: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, top: widget.dividerWeight)
@@ -99,12 +100,16 @@ class ProfileWheelState extends State<ProfileWheel> {
                   decoration: BoxDecoration(
                     gradient: gradients[index],
                   ),
-                  child: Container(margin: edgeInsets[index], color: widget.backgroundColor, child: items[index]),
+                  child: Container(
+                      margin: edgeInsets[index],
+                      color: widget.backgroundColor,
+                      child: items[index]),
                 );
               }),
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width / 4),
+              borderRadius:
+                  BorderRadius.circular(MediaQuery.of(context).size.width / 4),
               child: Image(
                 height: MediaQuery.of(context).size.width / 4,
                 width: MediaQuery.of(context).size.width / 4,

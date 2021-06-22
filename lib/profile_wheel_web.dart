@@ -3,7 +3,9 @@
 // package as the core of your plugin.
 // ignore: avoid_web_libraries_in_flutter
 
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+
 /// A web implementation of the ProfileWheel plugin.
 class ProfileWheelWeb {
-
+  static void registerWith(Registrar registrar) {}
 }

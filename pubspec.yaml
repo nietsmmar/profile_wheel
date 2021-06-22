@@ -1,6 +1,7 @@
 name: profile_wheel
-description: Good looking customizable profile Wheel
-version: 0.0.1
+description: Good looking customizable profile Wheel. Lets you customize all colors, shades,
+    icons etc.
+version: 0.0.2
 homepage: "https://github.com/nietsmmar/profile_wheel"
 repository: "https://github.com/nietsmmar/profile_wheel"
 

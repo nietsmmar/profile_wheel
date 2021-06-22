@@ -48,7 +48,8 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.white,
           dividerWeight: 1,
           preSelected: 3,
-          imageProvider: NetworkImage("https://www.w3schools.com/howto/img_avatar2.png"),
+          imageProvider:
+              NetworkImage("https://www.w3schools.com/howto/img_avatar2.png"),
         ),
       ),
     );

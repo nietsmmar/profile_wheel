@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 class WheelItem extends StatelessWidget {
   final VoidCallback onTapCallback;
-  int selected;
-  int index;
+  final int selected;
+  final int index;
   final String title;
   final IconData icon;
   final Alignment gradientAlignmentBegin;
@@ -57,7 +57,11 @@ class WheelItem extends StatelessWidget {
         child: Container(
             decoration: selected == index
                 ? BoxDecoration(
-                    borderRadius: BorderRadius.only(topLeft: topLeft, topRight: topRight, bottomLeft: bottomLeft, bottomRight: bottomRight),
+                    borderRadius: BorderRadius.only(
+                        topLeft: topLeft,
+                        topRight: topRight,
+                        bottomLeft: bottomLeft,
+                        bottomRight: bottomRight),
                     gradient: LinearGradient(
                       begin: gradientAlignmentBegin,
                       end: gradientAlignmentEnd,
