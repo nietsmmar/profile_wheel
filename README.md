@@ -1,15 +1,36 @@
 # profile_wheel
 
-A new flutter plugin project.
+Create your customized profile wheel.
 
+![alt text](https://github.com/nietsmmar/profile_wheel/blob/main/lib/example.png "Example
+ screenshot")
+ 
 ## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+Example:
+```
+ProfileWheel(
+  itemConfig: WheelItemConfig(
+    icon1: Icons.monetization_on,
+    onTapCallback1: () {},
+    shadowOffset1: Offset(-2, -2),
+    title1: "123 Coins",
+    icon2: Icons.person_add_alt_1,
+    onTapCallback2: () {},
+    shadowOffset2: Offset(2, -2),
+    title2: "5 Friends",
+    icon3: Icons.post_add,
+    onTapCallback3: () {},
+    shadowOffset3: Offset(-4, 8),
+    title3: "7 Posts",
+    icon4: Icons.add_moderator,
+    onTapCallback4: () {},
+    shadowOffset4: Offset(4, 8),
+    title4: "3 Badges",
+  ),
+  dividerColor: Colors.grey[300],
+  backgroundColor: Colors.white,
+  dividerWeight: 1,
+  preSelected: 3,
+  imageProvider: NetworkImage("https://www.w3schools.com/howto/img_avatar2.png"),
+)
+```
