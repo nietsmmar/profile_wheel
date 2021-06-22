@@ -1,6 +1,8 @@
 # profile_wheel
 
-Create your customized profile wheel.
+Flutter package to help you create your customized profile wheel.
+There are many options available to customize the wheel. The following example only covers the
+ required parameters. But it is possible to set all colors/shades etc.
 
 ![alt text](https://github.com/nietsmmar/profile_wheel/blob/main/lib/example.gif "Example
  screenshot")
