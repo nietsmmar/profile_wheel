@@ -2,7 +2,7 @@
 
 Create your customized profile wheel.
 
-![alt text](https://github.com/nietsmmar/profile_wheel/blob/main/lib/example_small.png "Example
+![alt text](https://github.com/nietsmmar/profile_wheel/blob/main/lib/example.gif "Example
  screenshot")
  
 ## Getting Started
