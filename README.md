@@ -7,7 +7,7 @@ Create your customized profile wheel.
  
 ## Getting Started
 Example:
-```
+```dart
 ProfileWheel(
   itemConfig: WheelItemConfig(
     icon1: Icons.monetization_on,
