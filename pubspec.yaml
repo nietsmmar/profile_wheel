@@ -1,7 +1,8 @@
 name: profile_wheel
 description: Good looking customizable profile Wheel
 version: 0.0.1
-homepage:
+homepage: "https://github.com/nietsmmar/profile_wheel"
+repository: "https://github.com/nietsmmar/profile_wheel"
 
 environment:
     sdk: ">=2.12.0 <3.0.0"
