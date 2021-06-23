@@ -10,20 +10,20 @@ class ProfileWheel extends StatefulWidget {
   final WheelItemConfig itemConfig;
   final double dividerWeight;
   final preSelected;
-  final double iconSize;
-  final double textSize;
+  final double width;
+  final double imageSize;
 
-  const ProfileWheel(
-      {Key? key,
-      required this.imageProvider,
-      required this.backgroundColor,
-      required this.dividerColor,
-      required this.itemConfig,
-      this.dividerWeight = 1.0,
-      this.preSelected = -1,
-      this.iconSize = 25,
-      this.textSize = 22})
-      : super(key: key);
+  const ProfileWheel({
+    Key? key,
+    required this.imageProvider,
+    required this.backgroundColor,
+    required this.dividerColor,
+    required this.itemConfig,
+    required this.width,
+    required this.imageSize,
+    this.dividerWeight = 1.0,
+    this.preSelected = -1,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => ProfileWheelState();
@@ -89,7 +89,8 @@ class ProfileWheelState extends State<ProfileWheel> {
   Widget build(BuildContext context) {
     buildItems();
     return Container(
-        height: MediaQuery.of(context).size.width,
+        height: widget.width,
+        width: widget.width,
         child: Stack(
           alignment: AlignmentDirectional.center,
           children: [
@@ -98,8 +99,6 @@ class ProfileWheelState extends State<ProfileWheel> {
               crossAxisCount: 2,
               children: List.generate(4, (index) {
                 return Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: MediaQuery.of(context).size.width / 2,
                   margin: edgeInsetsItem[index],
                   decoration: BoxDecoration(
                     gradient: gradients[index],
@@ -112,11 +111,10 @@ class ProfileWheelState extends State<ProfileWheel> {
               }),
             ),
             ClipRRect(
-              borderRadius:
-                  BorderRadius.circular(MediaQuery.of(context).size.width / 4),
+              borderRadius: BorderRadius.circular(widget.imageSize),
               child: Image(
-                height: MediaQuery.of(context).size.width / 4,
-                width: MediaQuery.of(context).size.width / 4,
+                height: widget.imageSize,
+                width: widget.imageSize,
                 fit: BoxFit.cover,
                 image: widget.imageProvider, // AssetImage
               ),
@@ -151,8 +149,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius1,
         shadowColor: widget.itemConfig.shadowColor1,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius1,
-        iconSize: widget.iconSize,
-        textSize: widget.textSize,
+        iconSize: widget.itemConfig.iconSize,
+        textSize: widget.itemConfig.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -178,8 +176,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius2,
         shadowColor: widget.itemConfig.shadowColor2,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius2,
-        iconSize: widget.iconSize,
-        textSize: widget.textSize,
+        iconSize: widget.itemConfig.iconSize,
+        textSize: widget.itemConfig.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -205,8 +203,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius3,
         shadowColor: widget.itemConfig.shadowColor3,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius3,
-        iconSize: widget.iconSize,
-        textSize: widget.textSize,
+        iconSize: widget.itemConfig.iconSize,
+        textSize: widget.itemConfig.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -232,8 +230,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius4,
         shadowColor: widget.itemConfig.shadowColor4,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius4,
-        iconSize: widget.iconSize,
-        textSize: widget.textSize,
+        iconSize: widget.itemConfig.iconSize,
+        textSize: widget.itemConfig.textSize,
       ),
     ];
   }

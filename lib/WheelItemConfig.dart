@@ -58,6 +58,9 @@ class WheelItemConfig {
   final double shadowSpreadRadius4;
   final Offset shadowOffset4;
 
+  final double textSize;
+  final double iconSize;
+
   WheelItemConfig(
       {required this.onTapCallback1,
       required this.title1,
@@ -110,6 +113,8 @@ class WheelItemConfig {
       this.shadowColor4 = Colors.green,
       this.shadowBlurRadius4 = 4.0,
       this.shadowSpreadRadius4 = 0.0,
-      required this.shadowOffset4})
+      required this.shadowOffset4,
+      this.textSize = 22,
+      this.iconSize = 25})
       : super();
 }
