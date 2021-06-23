@@ -1,3 +1,7 @@
+## 0.0.3
+
+* support for custom icon and text sizes
+
 ## 0.0.2
 
 * minor fixes

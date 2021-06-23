@@ -10,6 +10,8 @@ class ProfileWheel extends StatefulWidget {
   final WheelItemConfig itemConfig;
   final double dividerWeight;
   final preSelected;
+  final double iconSize;
+  final double textSize;
 
   const ProfileWheel(
       {Key? key,
@@ -18,7 +20,9 @@ class ProfileWheel extends StatefulWidget {
       required this.dividerColor,
       required this.itemConfig,
       this.dividerWeight = 1.0,
-      this.preSelected = -1})
+      this.preSelected = -1,
+      this.iconSize = 25,
+      this.textSize = 22})
       : super(key: key);
 
   @override
@@ -147,6 +151,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius1,
         shadowColor: widget.itemConfig.shadowColor1,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius1,
+        iconSize: widget.iconSize,
+        textSize: widget.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -172,6 +178,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius2,
         shadowColor: widget.itemConfig.shadowColor2,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius2,
+        iconSize: widget.iconSize,
+        textSize: widget.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -197,6 +205,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius3,
         shadowColor: widget.itemConfig.shadowColor3,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius3,
+        iconSize: widget.iconSize,
+        textSize: widget.textSize,
       ),
       WheelItem(
         onTapCallback: () {
@@ -222,6 +232,8 @@ class ProfileWheelState extends State<ProfileWheel> {
         shadowBlurRadius: widget.itemConfig.shadowBlurRadius4,
         shadowColor: widget.itemConfig.shadowColor4,
         shadowSpreadRadius: widget.itemConfig.shadowSpreadRadius4,
+        iconSize: widget.iconSize,
+        textSize: widget.textSize,
       ),
     ];
   }

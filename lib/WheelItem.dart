@@ -24,6 +24,8 @@ class WheelItem extends StatelessWidget {
   final double shadowBlurRadius;
   final double shadowSpreadRadius;
   final Offset shadowOffset;
+  final double? textSize;
+  final double? iconSize;
 
   WheelItem(
       {required this.onTapCallback,
@@ -47,6 +49,8 @@ class WheelItem extends StatelessWidget {
       this.shadowColor = Colors.teal,
       this.shadowBlurRadius = 4.0,
       this.shadowSpreadRadius = 0.0,
+      this.textSize,
+      this.iconSize,
       Key? key})
       : super(key: key);
 
@@ -83,7 +87,7 @@ class WheelItem extends StatelessWidget {
               children: [
                 Icon(
                   icon,
-                  size: 25,
+                  size: iconSize,
                   color: selected == index ? iconColorActive : iconColor,
                 ),
                 Padding(
@@ -92,7 +96,7 @@ class WheelItem extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: textSize,
                     color: selected == index ? textColorActive : textColor,
                   ),
                 )

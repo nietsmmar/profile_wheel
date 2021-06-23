@@ -1,3 +1,4 @@
+[![](https://img.shields.io/pub/v/profile_wheel)](https://pub.dev/packages/profile_wheel)
 # profile_wheel
 
 Flutter package to help you create your customized profile wheel.
