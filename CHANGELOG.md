@@ -1,3 +1,7 @@
+## 0.0.5
+
+* making shadowMargin customizable
+
 ## 0.0.4
 
 * add support to change profile_wheel and image size
