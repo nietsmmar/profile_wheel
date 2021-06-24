@@ -12,6 +12,7 @@ class ProfileWheel extends StatefulWidget {
   final preSelected;
   final double width;
   final double imageSize;
+  final double shadowMargin;
 
   const ProfileWheel({
     Key? key,
@@ -21,6 +22,7 @@ class ProfileWheel extends StatefulWidget {
     required this.itemConfig,
     required this.width,
     required this.imageSize,
+    this.shadowMargin = 15,
     this.dividerWeight = 1.0,
     this.preSelected = -1,
   }) : super(key: key);
@@ -41,18 +43,17 @@ class ProfileWheelState extends State<ProfileWheel> {
     super.initState();
 
     edgeInsets = [
-      EdgeInsets.only(
-          right: widget.dividerWeight, bottom: widget.dividerWeight),
+      EdgeInsets.only(right: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(right: widget.dividerWeight, top: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, top: widget.dividerWeight)
     ];
 
     edgeInsetsItem = [
-      EdgeInsets.only(left: 15, top: 15),
-      EdgeInsets.only(right: 15, top: 15),
-      EdgeInsets.only(bottom: 15, left: 15),
-      EdgeInsets.only(bottom: 15, right: 15)
+      EdgeInsets.only(left: widget.shadowMargin, top: widget.shadowMargin),
+      EdgeInsets.only(right: widget.shadowMargin, top: widget.shadowMargin),
+      EdgeInsets.only(bottom: widget.shadowMargin, left: widget.shadowMargin),
+      EdgeInsets.only(bottom: widget.shadowMargin, right: widget.shadowMargin)
     ];
 
     gradients = [
@@ -103,10 +104,7 @@ class ProfileWheelState extends State<ProfileWheel> {
                   decoration: BoxDecoration(
                     gradient: gradients[index],
                   ),
-                  child: Container(
-                      margin: edgeInsets[index],
-                      color: widget.backgroundColor,
-                      child: items[index]),
+                  child: Container(margin: edgeInsets[index], color: widget.backgroundColor, child: items[index]),
                 );
               }),
             ),
