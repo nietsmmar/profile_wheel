@@ -43,7 +43,8 @@ class ProfileWheelState extends State<ProfileWheel> {
     super.initState();
 
     edgeInsets = [
-      EdgeInsets.only(right: widget.dividerWeight, bottom: widget.dividerWeight),
+      EdgeInsets.only(
+          right: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, bottom: widget.dividerWeight),
       EdgeInsets.only(right: widget.dividerWeight, top: widget.dividerWeight),
       EdgeInsets.only(left: widget.dividerWeight, top: widget.dividerWeight)
@@ -104,7 +105,10 @@ class ProfileWheelState extends State<ProfileWheel> {
                   decoration: BoxDecoration(
                     gradient: gradients[index],
                   ),
-                  child: Container(margin: edgeInsets[index], color: widget.backgroundColor, child: items[index]),
+                  child: Container(
+                      margin: edgeInsets[index],
+                      color: widget.backgroundColor,
+                      child: items[index]),
                 );
               }),
             ),
@@ -122,6 +126,7 @@ class ProfileWheelState extends State<ProfileWheel> {
   }
 
   void buildItems() {
+    selected = widget.preSelected;
     items = [
       WheelItem(
         onTapCallback: () {
